@@ -1,0 +1,372 @@
+@font-face {
+  font-family: 'Saanstrial';
+  src: url('./assets/fonts/Saanstrial/SaansTRIAL-Light.woff') format('woff');
+  font-weight: 400;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Clashdisplay';
+  src: url('./assets/fonts/Clashdisplay/ClashDisplay-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal; 
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Sanstrial', sans-serif;
+}
+
+html {
+  font-size: clamp(
+    0.525rem,
+    calc(1.1135857461vw - 0.002225rem), 
+    1rem
+  );
+}
+
+body {
+  margin: 0 auto;
+  background: linear-gradient(180deg, #FFD2EF 0%, #E8CDFF 40.52%, #F6ECFF 74.69%, #FFF 100%) no-repeat;
+}
+
+.wrapper {
+  max-width: 90rem;
+  margin: 0 auto !important;
+}
+.container {
+  width: 100%;
+  padding: 0 3.5rem;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125rem;
+  margin: 6.25rem auto 1.875rem auto;
+
+  .hero-text {
+    text-align: center;
+    max-width: 54rem;
+    
+    & > p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #6f6f6f;
+    }
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 0.0625rem solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+
+  img {
+    width: 7rem;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+.nav-link.has-dropdown svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #000;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger-menu-icon {
+  display: none;
+}
+
+.btn-login {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-book {
+  background: #e43297;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-book:hover {
+  background: #d12b85;
+}
+
+.btn-trial {
+  background: #e43297;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-trial:hover {
+  background: #d12b85;
+}
+
+h1 {
+  font-family: 'Clashdisplay', sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.cta-button {
+  border-radius: 2rem;
+  color: #fff;
+  border: 0.0625rem solid #111;
+  padding: 0.7rem 1.5rem;
+  transition: all .2s;
+  cursor: pointer;
+  font-size: 1.125rem;
+  text-decoration: none;;
+  
+  &:hover {
+    box-shadow: 0.3125rem 0.1875rem 0 0.0625rem #111;
+  }
+  &.primary {
+    background-color: #e43297;
+  }
+  &.secondary {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &.small {
+    font-size: 0.875rem;
+  }
+}
+
+#videos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1.25rem;
+  width: 100%;
+  height: 18.75rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#videos::-webkit-scrollbar {
+  display: none;
+}
+
+.video-card {
+  background-color: #777;
+  border-radius: 1.5625rem;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  object-fit: cover;
+}
+.video-title {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.75rem;
+  color: #fff;
+
+  .thumbnail-as-dp {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(49, 143, 250, 0.7);
+  border: none;
+  outline: none;
+  width: 6rem;
+  height: 3.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  & > svg {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+video {
+  width: 25rem;
+  height: 43.75rem;
+  border-radius: 0.625rem;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 10;
+  
+  &.show {
+    display: flex;
+    pointer-events: auto;
+    width: 100vw;
+    height: 100svh;
+  }
+}
+.modal {
+  position: absolute;
+  inset: 50% auto auto 50% !important;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 25rem !important;
+  height: 43.75rem !important;
+  border-radius: 0.625rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 3vw;
+  }
+
+  .container {
+    padding: 1.56rem;
+  }
+
+  .navbar {
+    padding: 0;
+    
+    .container {
+      padding: 1.56rem;
+      height: 6.2rem;
+    }
+
+    .navbar-nav, .navbar-actions {
+      display: none;
+    }
+
+    .navbar-brand > img {
+      width: 9rem;
+    }
+  }
+
+  .hamburger-menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    row-gap: 0.9rem;
+    position: relative;
+
+    span {
+      width: 2.3rem;
+      height: 0.2rem;
+      background: #333;
+      position: relative;
+    }
+  }
+  
+  .hero-text {
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  #videos {
+    overflow-x: auto;
+  }
+
+  .video-card {
+    flex: 0 0 10.5rem;
+  }
+}

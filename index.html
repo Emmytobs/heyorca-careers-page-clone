@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://vjs.zencdn.net/8.23.3/video-js.css" rel="stylesheet" />
+
+    <script src="./index.js" defer></script>
+    <!-- Video.js library for playing m3u8 videos -->
+    <script defer src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
+    <title>Careers Hero Section</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <img src="https://cdn.prod.website-files.com/64fd2ab877368d04516ae836/64fd2ab877368d04516ae85a_menu_logo.svg" alt="HeyOrca!" />
+          </a>
+          
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link has-dropdown">
+                Why HeyOrca?
+                <svg height="100%" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.1004 7.45898L11.6671 12.8923C11.0254 13.534 9.97539 13.534 9.33372 12.8923L3.90039 7.45898" stroke="currentcolor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Agencies</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link has-dropdown">
+                Resources
+                <svg height="100%" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.1004 7.45898L11.6671 12.8923C11.0254 13.534 9.97539 13.534 9.33372 12.8923L3.90039 7.45898" stroke="currentcolor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          
+          <div class="navbar-actions">
+            <a href="#" class="btn-login">Login</a>
+            <a href="#" class="cta-button secondary small">Book personalized tour</a>
+            <a href="#" class="cta-button primary small">Start free trial</a>
+          </div>
+
+          <div class="hamburger-menu-icon" role="button" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <div class="container hero">
+        <div class="hero-text">
+          <h1>#JoinThePod</h1>
+          <p>We're not just building a social media management tool. We're shaping the future of communities. If you're excited about joining a team (or Pod) that's empowering marketers worldwide, we'd love to connect with you!</p>
+          <p>Please note: We don’t use recruitment agencies and only contact applicants from @heyorca.com or no-reply@collage.co. We’ll never ask for money or personal info like your SIN. Be cautious of any messages about roles not listed on this page.</p>
+          <button class="cta-button primary">Browse our open positions</button>
+        </div>
+        <div id="videos"></div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- HTML Templates -->
+    <template id="video-card-template">
+      <div class="video-card">
+        <img src="" class="thumbnail" />
+        <div class="video-title">
+          <img src="" class="thumbnail-as-dp" />
+          <span class="thumbnail-title"></span>
+        </div>
+        <button class="play-button">
+          <svg x="0px" y="0px" viewBox="0 0 125 80" enable-background="new 0 0 125 80" aria-hidden="true" style="fill: rgb(255, 255, 255);"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" opacity="1" transform="translate(44, 22)" d="M12.138 2.173C10.812 1.254 9 2.203 9 3.817v28.366c0 1.613 1.812 2.563 3.138 1.644l20.487-14.183a2 2 0 0 0 0-3.288L12.138 2.173Z"></path></svg>
+        </button>
+      </div>
+    </template>
+    <template id="video-container-template">
+      <div class="video-container">
+        <video 
+          class="video-player video-js" 
+          id="my-video"
+          data-setup="{}"
+          preload="auto"
+          width="auto"
+          height="auto"
+          controls 
+          autoplay 
+          playsinline
+        >
+          <source src="" type="application/x-mpegURL">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </template>
+  </body>
+</html>
